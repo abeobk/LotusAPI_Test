@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>SearchAlignTest</RootNamespace>
     <AssemblyName>SearchAlignTest</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
@@ -37,26 +38,32 @@
     <Reference Include="Abeo.Controls, Version=1.21.1020.633, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\LotusAPI\bin\Abeo.Controls.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LotusAPI, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\LotusAPI\bin\LotusAPI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LotusAPI.Controls, Version=1.0.2103.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\LotusAPI\bin\LotusAPI.Controls.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LotusAPI.Utils, Version=1.0.2103.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\LotusAPI\bin\LotusAPI.Utils.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SharpGL, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\LotusAPI\bin\SharpGL.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="SharpGL.WinForms, Version=3.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\LotusAPI\bin\SharpGL.WinForms.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -90,6 +97,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
