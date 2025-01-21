@@ -16,6 +16,7 @@ namespace LotusAPI_Test {
     public partial class FormScannerTest : Form {
         PointcloudViewer _pcv = null;
         AbeoScan _scanner = null;
+        Pointcloud _pc = null;
 
         public FormScannerTest() {
             InitializeComponent();
@@ -33,14 +34,13 @@ namespace LotusAPI_Test {
             Library.Initialize();
 
 
-            this.FormClosed += FormScannerTest_FormClosed;
-
+            this.FormClosed += delegate {
+                _scanner?.Disconnect();
+                Library.Terminate();
+            };
         }
 
-        private void FormScannerTest_FormClosed(object sender, FormClosedEventArgs e) {
-            _scanner?.Disconnect();
-        }
-
+        // Connect to scanner
         private void bt_Connect_Click(object sender, EventArgs e) {
             try {
                 var f = new FormAbeoscanConnect();
@@ -63,22 +63,25 @@ namespace LotusAPI_Test {
             } catch(Exception ex) { LotusAPI.Logger.Error(ex.Message); }
         }
 
+        // Check scanner status
         void AssertScanner() {
             if(_scanner == null) throw new Exception("Invalid scanner!");
             if(!_scanner.IsConnected) throw new Exception("Scanner is not connected!");
         }
+
+        // Capture scene
         private void bt_Scan_Click(object sender, EventArgs e) {
             try {
                 AssertScanner();
 
                 //grab a pointcloud
-                var pc = _scanner.Scan();
+                _pc = _scanner.Scan();
 
                 //clear display
                 _pcv.Clear();
 
                 //add to viewer
-                _pcv.Add(pc, Color.Gray);
+                _pcv.Add(_pc, Color.White);
 
                 //and display
                 _pcv.Render();
@@ -86,19 +89,16 @@ namespace LotusAPI_Test {
             } catch(Exception ex) { LotusAPI.Logger.Error(ex.Message); }
         }
 
-        private void bt_ScannerSetting_Click(object sender, EventArgs e) {
-            try {
-                AssertScanner();
-                var f = new Abeo.Controls.Common.FormObjectEditor(_scanner);
-                if(f.ShowDialog() == DialogResult.OK) {
-                    _scanner.Invalidate();
-                }
-            } catch(Exception ex) { LotusAPI.Logger.Error(ex.Message); }
-        }
-
+        //Clear display
         private void bt_ClearDisplay_Click(object sender, EventArgs e) {
+            _pc = null;
             _pcv.Clear();
             _pcv.Render();
+        }
+
+        // Save pointcloud with PLY format
+        private void bt_Save_Click(object sender, EventArgs e) {
+            DialogUtils.SavePlyFile(_pc, "Save ply file");
         }
     }
 }
