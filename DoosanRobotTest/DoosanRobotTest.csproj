@@ -37,30 +37,37 @@
     <Reference Include="Abeo.Controls, Version=1.21.1020.633, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\LotusAPI\bin\Abeo.Controls.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ATMC.Common, Version=1.25.205.302, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\LotusAPI\bin\ATMC.Common.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LotusAPI, Version=0.0.0.0, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\LotusAPI\bin\LotusAPI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LotusAPI.Controls, Version=1.0.2103.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\LotusAPI\bin\LotusAPI.Controls.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LotusAPI.Data, Version=1.0.2103.3, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\LotusAPI\bin\LotusAPI.Data.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LotusAPI.Robotics, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\LotusAPI\bin\LotusAPI.Robotics.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="LotusAPI.Utils, Version=1.0.2103.2, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\LotusAPI\bin\LotusAPI.Utils.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
