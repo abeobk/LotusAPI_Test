@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31702.278
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScannerTest", "LotusAPI_Test\ScannerTest.csproj", "{DE234228-2A50-43CC-AE99-9418E8418731}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAlignTest", "SearchAlignTest\SearchAlignTest.csproj", "{9715CB3F-0671-422A-9BC4-0463DE6CA3E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoosanRobotTest", "DoosanRobotTest\DoosanRobotTest.csproj", "{3D3D3913-DC17-442F-A9A1-458FAF539005}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{9715CB3F-0671-422A-9BC4-0463DE6CA3E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9715CB3F-0671-422A-9BC4-0463DE6CA3E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9715CB3F-0671-422A-9BC4-0463DE6CA3E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3D3913-DC17-442F-A9A1-458FAF539005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3D3913-DC17-442F-A9A1-458FAF539005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3D3913-DC17-442F-A9A1-458FAF539005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3D3913-DC17-442F-A9A1-458FAF539005}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
