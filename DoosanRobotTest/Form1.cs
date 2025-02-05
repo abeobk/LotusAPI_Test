@@ -62,6 +62,7 @@ namespace DoosanRobotTest {
                 if(!DialogUtils.AskForConfirmation("Do you want to move X+100mm?")) return;
 
                 Logger.Log("MOVEL X+100mm");
+                //prepare transform matrix
                 Matrix44d H = LotusAPI.Math.Utils.Trans4(100, 0, 0); //x+100mm transform matrix (R=I, t=(100,0,0))
                 MoveRobot(H);
             } catch(Exception ex) { Logger.Error(ex.Message); Logger.Trace(ex.StackTrace); }
@@ -74,6 +75,7 @@ namespace DoosanRobotTest {
                 if(!DialogUtils.AskForConfirmation("Do you want to move X-100mm?")) return;
 
                 Logger.Log("MOVEL X-100mm");
+                //prepare transform matrix
                 Matrix44d H = LotusAPI.Math.Utils.Trans4(-100, 0, 0); //x-100mm transform matrix (R=I, t=(-100,0,0))
                 MoveRobot(H);
 
@@ -81,7 +83,6 @@ namespace DoosanRobotTest {
         }
 
         void MoveRobot(Matrix44d H) {
-            //prepare transform matrix
             Logger.Log("H=\n" + H);
             //get current pose
             var pose = _robot.GetCurrentPose();
@@ -91,7 +92,7 @@ namespace DoosanRobotTest {
             pose.Matrix = H * pose.Matrix;
 
             //ask robot to move
-            _robot.MoveL(pose, 500,5000);
+            _robot.MoveL(pose, 500, 5000);
 
             //wait until finish
             _robot.WaitMotion();
